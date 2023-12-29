@@ -63,10 +63,11 @@
 import AppCard from '../components/AppCard'
 import { useProfile } from '../use/profile'
 import { defineHeightCardBody } from '../utils/HeightUtil'
+import { cardHeightView } from '../constants'
 
 export default {
   setup() {
-    return { ...defineHeightCardBody(), ...useProfile() }
+    return { ...defineHeightCardBody(cardHeightView.profile.label), ...useProfile() }
   },
   components: { AppCard }
 }

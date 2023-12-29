@@ -1,25 +1,19 @@
 <template>
-  <el-container class="container">
-    <el-aside class="common-aside">
-      Aside
-    </el-aside>
+  <el-container>
+    <el-container class="common-container">
+      <el-header class="common-header">
+        <TheNavbar />
+        <TheBreadCrumbs />
+      </el-header>
 
-    <el-container>
-      <el-container class="common-container">
-        <el-header class="common-header">
-          <TheNavbar />
-          <TheBreadCrumbs />
-        </el-header>
-
-        <el-main>
-          <router-view />
-        </el-main>
-      </el-container>
-
-      <el-footer>
-        <TheFooter />
-      </el-footer>
+      <el-main>
+        <router-view />
+      </el-main>
     </el-container>
+
+    <el-footer>
+      <TheFooter />
+    </el-footer>
   </el-container>
 </template>
 
@@ -36,13 +30,6 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-}
-.common-aside {
-  background-color: #f0f1f4;
-}
 .common-container {
   padding: 20px 40px;
 }
